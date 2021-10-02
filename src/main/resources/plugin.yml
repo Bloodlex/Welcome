@@ -1,0 +1,10 @@
+name: Welcome
+version: '${project.version}'
+main: pl.ktmc.welcome.Welcome
+api-version: 1.17
+prefix: Welcome
+authors: [ Buldog ]
+description: Plugin do powitań
+website: www.ktmc.pl
+softdepend:
+  - CMI
