@@ -1,4 +1,4 @@
-package pl.ktmc.welcome.utils;
+package pl.ktmc.welcome.utils.center;
 
 public enum DefaultFontInfo {
 

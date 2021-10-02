@@ -6,8 +6,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-import static pl.ktmc.welcome.utils.Utils.isVanished;
-import static pl.ktmc.welcome.utils.Utils.playerJoined;
+import static pl.ktmc.welcome.messages.PlayerJoinMessages.welcome;
+import static pl.ktmc.welcome.utils.Vanish.isVanished;
 
 public class WelcomePlayerJoinEvent implements Listener {
 
@@ -16,8 +16,8 @@ public class WelcomePlayerJoinEvent implements Listener {
         event.joinMessage(Component.text(""));
         Player player = event.getPlayer();
 
-        if (!isVanished(player) && !isVanished(player.getUniqueId())) {
-            playerJoined(player);
+        if (!isVanished(player)) {
+            welcome(player);
         }
     }
 }

@@ -6,8 +6,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-import static pl.ktmc.welcome.utils.Utils.isVanished;
-import static pl.ktmc.welcome.utils.Utils.playerLeft;
+import static pl.ktmc.welcome.messages.PlayerQuitMessages.farewell;
+import static pl.ktmc.welcome.utils.Vanish.isVanished;
 
 public class WelcomePlayerQuitEvent implements Listener {
 
@@ -16,8 +16,8 @@ public class WelcomePlayerQuitEvent implements Listener {
         event.quitMessage(Component.text(""));
         Player player = event.getPlayer();
 
-        if (!isVanished(player) && !isVanished(player.getUniqueId())) {
-            playerLeft(player);
+        if (!isVanished(player)) {
+            farewell(player);
         }
     }
 }
