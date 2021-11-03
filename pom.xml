@@ -91,6 +91,10 @@
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -101,11 +105,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.sample</groupId>
-            <artifactId>samplifact</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>C:\Users\bigat\Documents\JavaProjects\Welcome\lib\SuperVanish-6.2.6.jar</systemPath>
+            <groupId>com.github.LeonMangler</groupId>
+            <artifactId>SuperVanish</artifactId>
+            <version>6.2.6-2</version>
         </dependency>
     </dependencies>
 </project>
