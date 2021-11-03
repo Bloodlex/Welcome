@@ -3,11 +3,12 @@ package pl.ktmc.welcome.event;
 import net.kyori.adventure.text.Component;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 import static pl.ktmc.welcome.messages.PlayerQuitMessages.farewell;
-import static pl.ktmc.welcome.utils.Vanish.isVanished;
+import static pl.ktmc.welcome.utils.Vanish.*;
 
 public class WelcomePlayerQuitEvent implements Listener {
 
@@ -16,7 +17,7 @@ public class WelcomePlayerQuitEvent implements Listener {
         event.quitMessage(Component.text(""));
         Player player = event.getPlayer();
 
-        if (!isVanished(player)) {
+        if (!isSuperVanishVanished(player)) {
             farewell(player);
         }
     }

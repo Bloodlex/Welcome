@@ -105,7 +105,7 @@
             <artifactId>samplifact</artifactId>
             <version>1.0</version>
             <scope>system</scope>
-            <systemPath>C:\Users\bigat\Documents\JavaProjects\Welcome\lib\CMI9.0.4.5.jar</systemPath>
+            <systemPath>C:\Users\bigat\Documents\JavaProjects\Welcome\lib\SuperVanish-6.2.6.jar</systemPath>
         </dependency>
     </dependencies>
 </project>
