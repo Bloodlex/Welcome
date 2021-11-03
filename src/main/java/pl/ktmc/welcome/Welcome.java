@@ -3,6 +3,8 @@ package pl.ktmc.welcome;
 import org.bukkit.plugin.java.JavaPlugin;
 import pl.ktmc.welcome.event.WelcomePlayerJoinEvent;
 import pl.ktmc.welcome.event.WelcomePlayerQuitEvent;
+import pl.ktmc.welcome.event.WelcomeUnvanishEvent;
+import pl.ktmc.welcome.event.WelcomeVanishEvent;
 
 public final class Welcome extends JavaPlugin {
 
@@ -17,9 +19,7 @@ public final class Welcome extends JavaPlugin {
         setPlugin(this);
         getServer().getPluginManager().registerEvents(new WelcomePlayerJoinEvent(), this);
         getServer().getPluginManager().registerEvents(new WelcomePlayerQuitEvent(), this);
-    }
-
-    @Override
-    public void onDisable() {
+        getServer().getPluginManager().registerEvents(new WelcomeUnvanishEvent(), this);
+        getServer().getPluginManager().registerEvents(new WelcomeVanishEvent(), this);
     }
 }
